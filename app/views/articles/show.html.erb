@@ -1,9 +1,11 @@
 <div class="container">
-  <h1> <%= @article.title %> </h1>
-    <p> <%= @article.content %> </p>
+  <h1 class="header30"> <%= @article.title %> </h1>
+    <p class="article"> <%= @article.content %> </p>
+  <div class="links">
   <p> <%=  link_to "Delete",
   article_path(@article),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </p>
 
   <%= link_to "View list", articles_path %>
+  </div>
 </div>
