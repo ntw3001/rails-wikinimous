@@ -1,0 +1,9 @@
+<div class="container">
+  <h1> <%= @article.title %> </h1>
+    <p> <%= @article.content %> </p>
+  <p> <%=  link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </p>
+
+  <%= link_to "View list", articles_path %>
+</div>
